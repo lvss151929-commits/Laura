@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+        <div class="container">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item"><a class="nav-link" href="#seccion1">Análisis</a></li>
+                <li class="nav-item"><a class="nav-link" href="#seccion2">Frameworks</a></li>
+                <li class="nav-item"><a class="nav-link" href="#seccion3">Referencias bibliográficas</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="text-center p-5 bg-light">
+        <h1>Actividad Fase 1</h1>
+    </div>
+</header>
+
+
+<body>
+    <main class="container pt-5">
+        <section id="seccion1">
+            <h2 class="mb-4">Análisis del problema</h2>
+            <h3 class="mb-4">Requisitos funcionales</h3>
+            <ol class="mb-3">
+                <li>La página web debe contar con las secciones indicadas por el cliente para ofrecer sus servicios y
+                    ofertas de empleo de manera pública.</li>
+                <li>El sistema debe permitir el acceso a una sección privada únicamente para personal autorizado,
+                    correspondiente a los procesos internos de la firma.</li>
+                <li>La página o interfaz privada que supervisarán los integrantes de la firma debe contar con un
+                    registro e inicio de sesión.</li>
+                <li>El sistema debe permitir a los usuarios consultar el estado de evaluación de su hoja de vida.</li>
+                <li>El sistema debe validar los datos del formulario para evitar el envío de campos vacíos o información
+                    duplicada.</li>
+                <li>La sección de la página encargada de los procesos debe permitir operaciones CRUD (creación, lectura,
+                    escritura y eliminación).</li>
+            </ol>
+
+            <h3>Requisitos no funcionales</h3>
+            <ol class="mb-3">
+                <li>La página web debe contar con un tiempo de carga inferior a 5 segundos bajo condiciones normales de
+                    conexión.</li>
+                <li>El acceso a la base de datos debe estar restringido únicamente a personal autorizado, mediante un
+                    sistema de control de permisos.</li>
+                <li>El sistema debe mostrar mensajes claros y comprensibles ante errores o tras la realización de
+                    cambios en los datos.</li>
+                <li>El sistema debe cumplir con lineamientos de seguridad, incluyendo el uso de contraseñas seguras.
+                </li>
+                <li>La interfaz de la página debe ser responsiva.</li>
+                <li>El sistema debe ofrecer una experiencia de usuario intuitiva y accesible, garantizando una buena
+                    usabilidad.</li>
+                <li>Se deben implementar bases de datos escalables, que soporten un crecimiento en la cantidad de
+                    información sin afectar el rendimiento.</li>
+                <li>El acceso al entorno privado de la empresa debe estar protegido mediante autenticación segura para
+                    personal autorizado.</li>
+            </ol>
+
+            <h3>Actores</h3>
+            <ul class="mb-3">
+                <li><strong>Integrantes de la firma:</strong> Personas que ofrecen sus servicios a través de la
+                    plataforma y que cuentan con autorización para acceder al entorno privado de la empresa. Interactúan
+                    en un apartado interno donde realizan el seguimiento de sus procesos.</li>
+                <li><strong>Administrador de bases de datos:</strong> Persona encargada de la administración de las
+                    bases de datos, con permisos especiales para gestionar la información y realizar copias de
+                    seguridad.</li>
+                <li><strong>Postulantes:</strong> Personas interesadas en unirse a la firma, que ingresan a la página
+                    para subir su hoja de vida y recibir la evaluación correspondiente. Realizan el formulario de
+                    postulación y pueden consultar el estado de su proceso.</li>
+                <li><strong>Evaluadores:</strong> Profesionales encargados de recibir, revisar y aprobar o rechazar las
+                    hojas de vida enviadas por los postulantes.</li>
+                <li><strong>Clientes:</strong> Usuarios que visitan la página para obtener información sobre los
+                    servicios legales ofrecidos. Pueden acceder a secciones como profesionales de la firma, trayectoria,
+                    contacto, ubicaciones y noticias de interés general a través de una interfaz amigable.</li>
+            </ul>
+
+            <h3 class="mb-4">Información a registrar</h3>
+
+            <h4 class="mb-4">Interfaz pública</h4>
+            <ul class="mb-3">
+                <li>Página de inicio: Información introductoria sobre la firma y los servicios ofrecidos.</li>
+                <li>Página de trayectoria: Historia de la firma, experiencia, logros y casos de éxito.</li>
+                <li>Página de noticias: Actualizaciones y artículos de interés relacionados con la firma o el mundo
+                    legal.</li>
+                <li>Página de profesionales: Perfiles de los miembros de la firma, incluyendo especialidades y
+                    contactos.</li>
+                <li>Página de contacto: Formulario para contactar a la firma, dirección física, teléfono y medios de
+                    comunicación.</li>
+                <li>Página de postulación: Formulario para que los postulantes envíen sus hojas de vida y datos para su
+                    evaluación. Sección para revisar estado de postulación.</li>
+            </ul>
+
+            <h4 class="mb-4">Interfaz privada</h4>
+            <ul class="mb-3">
+                <li>Página de inicio de sesión: Inicio de sesión para que los usuarios autorizados ingresen al sistema.
+                </li>
+                <li>Página de registro: Formulario para registrar nuevos usuarios (evaluadores, administradores,
+                    abogados, etc.).</li>
+                <li>Página de gestión de procesos: Vista para que los miembros internos gestionen los casos y procesos
+                    legales.</li>
+                <li>Página para evaluar hojas de vida: Vista para que los evaluadores revisen las hojas de vida de los
+                    postulantes y registren su evaluación (aceptado/rechazado).</li>
+            </ul>
+        </section>
+
+
+        <section id="seccion2" class="container pt-5">
+            <h2 class="mb-4">Frameworks</h2>
+            <p class="mb-4">
+                Actualmente los frameworks son muy utilizados porque las empresas prefieren acelerar la creación de
+                páginas web en lugar de diseñar todo desde cero. Los frameworks ayudan a optimizar el trabajo al ofrecer
+                clases predefinidas, funciones listas para usar y diseños prediseñados que facilitan crear sitios web
+                con buena usabilidad, responsividad y una excelente experiencia de usuario.
+            </p>
+            <p class="mb-4">
+                Un framework o marco de trabajo es un conjunto de librerías y herramientas que proporcionan una
+                estructura para organizar mejor el código, reutilizarlo fácilmente y lograr diseños responsivos de forma
+                ágil. Existen frameworks especializados tanto para backend como para frontend.
+            </p>
+
+            <h3 class="mb-3">Frameworks para diseño web responsivo y usabilidad</h3>
+
+            <h4 class="mt-4">Bootstrap</h4>
+            <p class="mb-3">
+                Es un framework CSS enfocado en un enfoque <em>mobile-first</em>. Ofrece clases utilitarias y
+                componentes UI predefinidos, junto con un sistema de rejilla basado en columnas que facilitan la
+                creación de diseños responsivos. Destaca por su facilidad de uso y su capacidad para crear sitios
+                adaptables de manera sencilla.
+            </p>
+
+            <h4 class="mt-4">Tailwind</h4>
+            <p class="mb-3">
+                Este framework CSS se destaca por su alto nivel de personalización. Funciona con utilidades (clases
+                pequeñas) que permiten construir diseños personalizados directamente en el código HTML. Es liviano y
+                ofrece un buen soporte para crear interfaces responsivas y modernas.
+            </p>
+
+            <h4 class="mt-4">Bulma</h4>
+            <p class="mb-3">
+                Es un framework gratuito y fácil de aprender. Usa Flexbox para crear layouts flexibles y responsivos,
+                facilitando la organización de filas, columnas y el centrado de contenido. También incluye componentes
+                predefinidos como botones y formularios, que mejoran la usabilidad y la interacción del usuario.
+            </p>
+
+            <h4 class="mt-4">Foundation</h4>
+            <p class="mb-4">
+                Foundation es un framework que también prioriza el diseño para dispositivos móviles, lo cual es útil
+                dado el gran uso de estos dispositivos. Además de su sistema de rejilla flexible y sus componentes UI,
+                incluye plantillas prediseñadas para acelerar el desarrollo de páginas web.
+            </p>
+        </section>
+
+        <section id="seccion3" class="container pt-5">
+            <h2 class="mb-4">Referencias bibliográficas</h2>
+            <ul class="mb-5 text-break">
+                <li class="mb-3">10 Best Frontend Frameworks for Responsive Web Design—GeeksforGeeks. (s. f.).
+                    Recuperado 1 de septiembre de 2025, de <a
+                        href="https://www.geeksforgeeks.org/blogs/best-frontend-frameworks-for-responsive-web-design/"
+                        target="_blank">https://www.geeksforgeeks.org/blogs/best-frontend-frameworks-for-responsive-web-design/</a>
+                </li>
+
+                <li class="mb-3">B, G. (2018, junio 22). ¿Qué es un dominio web? Dominios explicados para principiantes.
+                    Tutoriales Hostinger. <a href="https://www.hostinger.com/co/tutoriales/que-es-un-dominio-web"
+                        target="_blank">https://www.hostinger.com/co/tutoriales/que-es-un-dominio-web</a></li>
+
+                <li class="mb-3">B, G. (2018, junio 8). ¿Qué es un hosting y cómo funciona? Tutoriales Hostinger. <a
+                        href="https://www.hostinger.com/co/tutoriales/que-es-un-hosting"
+                        target="_blank">https://www.hostinger.com/co/tutoriales/que-es-un-hosting</a></li>
+
+                <li class="mb-3">Bootstrap Footer—Free examples & tutorial. (s. f.). MDB - Material Design for
+                    Bootstrap. Recuperado 1 de septiembre de 2025, de <a
+                        href="https://mdbootstrap.com/docs/standard/navigation/footer/"
+                        target="_blank">https://mdbootstrap.com/docs/standard/navigation/footer/</a></li>
+
+                <li class="mb-3">Bootstrap Headers—Free examples & tutorial. (s. f.). MDB - Material Design for
+                    Bootstrap. Recuperado 1 de septiembre de 2025, de <a
+                        href="https://mdbootstrap.com/docs/standard/navigation/headers/"
+                        target="_blank">https://mdbootstrap.com/docs/standard/navigation/headers/</a></li>
+
+                <li class="mb-3">contributors, M. O., Jacob Thornton, and Bootstrap. (s. f.). Get started with
+                    Bootstrap. Recuperado 1 de septiembre de 2025, de <a
+                        href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                        target="_blank">https://getbootstrap.com/docs/5.3/getting-started/introduction/</a></li>
+
+                <li class="mb-3">CSS Media Queries—CSS en español. (s. f.). Recuperado 1 de septiembre de 2025, de <a
+                        href="https://lenguajecss.com/css/responsive-web-design/media-queries/"
+                        target="_blank">https://lenguajecss.com/css/responsive-web-design/media-queries/</a></li>
+
+                <li class="mb-3">Cuál es la diferencia entre Servidor Web y Hosting. (2018, febrero 9). <a
+                        href="https://www.webempresa.com/hosting/diferencia-servidor-web-hosting.html"
+                        target="_blank">https://www.webempresa.com/hosting/diferencia-servidor-web-hosting.html</a></li>
+
+                <li class="mb-3">¿Cuáles son los mejores frameworks de diseño web responsivos para crear sitios web
+                    profesionales? (s. f.). Recuperado 1 de septiembre de 2025, de <a
+                        href="https://es.linkedin.com/advice/3/what-top-responsive-web-design-frameworks-building-f8nqe?lang=es"
+                        target="_blank">https://es.linkedin.com/advice/3/what-top-responsive-web-design-frameworks-building-f8nqe?lang=es</a>
+                </li>
+
+                <li class="mb-3">Diseño receptivo—Aprende desarrollo web | MDN. (2025, junio 19). MDN Web Docs. <a
+                        href="https://developer.mozilla.org/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design"
+                        target="_blank">https://developer.mozilla.org/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design</a>
+                </li>
+
+                <li class="mb-3">Frameworks para desarrollo web: 15 ejemplos con características. (2025, julio 14). <a
+                        href="https://blog.hubspot.es/website/framework-desarrollo-web"
+                        target="_blank">https://blog.hubspot.es/website/framework-desarrollo-web</a></li>
+
+                <li class="mb-3">Ibero, L. (s. f.). Frameworks de desarrollo y tipos e importancia | IBERO. La Ibero.
+                    Recuperado 1 de septiembre de 2025, de <a
+                        href="https://www.ibero.edu.co/blog/articulos/frameworks-de-desarrollo"
+                        target="_blank">https://www.ibero.edu.co/blog/articulos/frameworks-de-desarrollo</a></li>
+
+                <li class="mb-3">Pantoja, L., & Pardo, C. (2016). Evaluando la Facilidad de Aprendizaje de Frameworks
+                    MVC en el Desarrollo de Aplicaciones Web. Publicaciones E Investigación, 10, 129-142. <a
+                        href="https://doi.org/10.22490/25394088.1592"
+                        target="_blank">https://doi.org/10.22490/25394088.1592</a></li>
+
+                <li class="mb-3">Pérez Martínez, E. (2015). Desarrollo de aplicaciones mediante el Framework de Spring.
+                    RA-MA Editorial. <a
+                        href="https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/107207?page=11"
+                        target="_blank">https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/107207?page=11</a>
+                </li>
+
+                <li class="mb-3">¿Qué es Responsive Design? - CSS en español. (s. f.). Recuperado 1 de septiembre de
+                    2025, de <a href="https://lenguajecss.com/css/responsive-web-design/que-es/"
+                        target="_blank">https://lenguajecss.com/css/responsive-web-design/que-es/</a></li>
+
+                <li class="mb-3">Zofío Jiménez, J. (2013). Aplicaciones web. Macmillan Iberia, S.A. <a
+                        href="https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/43262?page=19"
+                        target="_blank">https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/43262?page=19</a>
+                </li>
+            </ul>
+        </section>
+
+
+
+    </main>
+
+
+</body>
+
+<footer class="bg-body-tertiary text-center text-lg-start">
+
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2020 Copyright: Laura Sepúlveda
+    </div>
+
+</footer>
+
+</html>
